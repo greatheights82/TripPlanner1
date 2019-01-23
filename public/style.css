@@ -9,6 +9,28 @@ body {
 }
 
 #map {
+  position: relative;
   height: 100vh;
   width: 100vw;
+  z-index: 1;
+}
+
+#navbar {
+  display: flex;
+  position: fixed;
+
+  height: 50px;
+  width: 100vw;
+  background-color: aqua;
+  z-index: 2;
+}
+
+.trip {
+  color: red;
+  display: flex;
+  flex-direction: column;
+  background-color: brown;
+  height: 50px;
+  width: 100vw;
+  z-index: 3;
 }
