@@ -20,7 +20,12 @@ const buildMarker = function(type, coords) {
     iconURL = iconURLs.activities;
   }
 
-  return { iconURL, coords };
+  const markerDomEl = document.createElement('div');
+  markerDomEl.style.width = '32px';
+  markerDomEl.style.height = '39px';
+  markerDomEl.style.backgroundImage = `url(${iconURL})`;
+
+  return new mapboxgl.Marker(markerDomEl).setLngLat(coords);
 };
 
 module.exports = buildMarker;
