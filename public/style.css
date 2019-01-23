@@ -4,14 +4,15 @@
 
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background-color: #c1b5ad;
 }
 
 #map {
   position: relative;
-  height: 100vh;
-  width: 100vw;
+  display: flex;
+  height: 50vh;
+  width: 50vw;
   z-index: 1;
 }
 
@@ -29,6 +30,7 @@ body {
   color: red;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   background-color: brown;
   height: 50px;
   width: 100vw;
