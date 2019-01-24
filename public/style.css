@@ -4,33 +4,64 @@
 
 body {
   margin: 0;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: fantasy;
   background-color: #c1b5ad;
 }
 
+header {
+  display: flex;
+  align-items: center;
+  height: 3.5em;
+  padding: 0 0.5rem;
+  background-color: midnightblue;
+}
+
+h1 {
+  color: gray;
+}
+
+h3 {
+  color: lightgray;
+}
+
+#app {
+  display: flex;
+}
+
 #map {
-  position: relative;
-  display: flex;
-  height: 50vh;
-  width: 50vw;
-  z-index: 1;
-}
-/* 
-#navbar {
-  display: flex;
-  position: fixed;
-
-  height: 50px;
-  width: 100vw;
-  background-color: aqua;
-  z-index: 2;
+  flex: 2;
+  height: calc(100vh - 3em);
+  overflow: hidden;
 }
 
-.trip {
-  color: red;
+aside {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  background-color: brown;
-  z-index: 3;
-} */
+  background-color: mediumblue;
+}
+
+.panel {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 2px;
+}
+
+select {
+  width: calc(100% - 25px);
+  font-size: 12px;
+}
+
+.options-button {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 0;
+}
+.options-button:hover {
+  background-color: lightgrey;
+}
+
+.options-button:active {
+  background-color: darkgray;
+}

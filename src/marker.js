@@ -7,23 +7,15 @@ const iconURLs = {
 };
 
 const buildMarker = function(type, coords) {
-  let iconURL = '';
-  if (type === 'hotel') {
-    iconURL = iconURLs.hotels;
-  }
-
-  if (type === 'restaurant') {
-    iconURL = iconURLs.restaurants;
-  }
-
-  if (type === 'activity') {
-    iconURL = iconURLs.activities;
-  }
+  // //From solution code
+  // if (!iconURLs.hasOwnProperty(type)) {
+  //   type = "activities";
+  // }
 
   const markerDomEl = document.createElement('div');
   markerDomEl.style.width = '32px';
   markerDomEl.style.height = '39px';
-  markerDomEl.style.backgroundImage = `url(${iconURL})`;
+  markerDomEl.style.backgroundImage = `url(${iconURLs[type]})`;
 
   return new mapboxgl.Marker(markerDomEl).setLngLat(coords);
 };
